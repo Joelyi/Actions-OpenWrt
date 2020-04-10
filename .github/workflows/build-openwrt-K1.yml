@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: K1
+name: openwrt-K1
 
 on:
   repository_dispatch:
