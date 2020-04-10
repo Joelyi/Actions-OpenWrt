@@ -17,8 +17,8 @@ on:
       - master
     paths:
       - 'K1.config'
- schedule:
-   - cron: 20 5 * * 4
+  schedule:
+    - cron: 20 5 * * 4
 #  watch:
 #    types: started
 
