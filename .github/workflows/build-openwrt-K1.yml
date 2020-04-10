@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: openwrt-K1
+name: OpenWrt K1
 
 on:
   repository_dispatch:
@@ -17,8 +17,8 @@ on:
       - master
     paths:
       - 'K1.config'
- schedule:
-   - cron: 20 5 * * 4
+#  schedule:
+#    - cron: 0 8 * * 5
 #  watch:
 #    types: started
 
