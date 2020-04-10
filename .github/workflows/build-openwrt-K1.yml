@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: K1
 
 on:
   repository_dispatch:
@@ -16,16 +16,16 @@ on:
     branches:
       - master
     paths:
-      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
+      - 'K1.config'
+ schedule:
+   - cron: 20 5 * * 4
 #  watch:
 #    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: .config
+  CONFIG_FILE: K1.config
   DIY_SH: diy.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -113,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware
+        name: OpenWrt_K1
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
