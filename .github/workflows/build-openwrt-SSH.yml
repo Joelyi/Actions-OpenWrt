@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt SHH
+name: OpenWrt SSH
 
 on:
   repository_dispatch:
@@ -16,7 +16,7 @@ on:
     branches:
       - master
     paths:
-      - 'SHH.config'
+      - 'SSH.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -25,9 +25,9 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: SHH.config
+  CONFIG_FILE: SSH.config
   DIY_SH: diy.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -113,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_SHH
+        name: OpenWrt_SSH
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
