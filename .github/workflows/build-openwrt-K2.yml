@@ -23,11 +23,10 @@ on:
 #    types: started
 
 env:
-  T_NAME: "PSG1218"
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: K2.config
-  DIY_SH: diy.sh
+  DIY_SH: K2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
