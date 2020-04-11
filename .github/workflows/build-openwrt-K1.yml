@@ -23,7 +23,7 @@ on:
 #    types: started
 
 env:
-  T_NAME: "PSG1208"                     # 设备名字
+  T_NAME: "PSG1208"
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: K1.config
