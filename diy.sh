@@ -18,7 +18,7 @@ sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 # 删除原软件包
-rm -rf package/lean/Luci-theme-argon
+rm -rf package/lean/luci-theme-argon  
 
 # 添加软件包
 #ssrplus
