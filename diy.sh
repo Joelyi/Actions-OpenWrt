@@ -12,14 +12,17 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 删除原软件包
-rm -r lede/package/lean/Luci-theme-argon
+rm -rf package/lean/Luci-theme-argon
 
 # 添加软件包
 #ssrplus
 git clone https://github.com/fw876/helloworld package/lean/luci-app-ssr-plus
 #theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/Luci-theme-argon
+#passwall
+# git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
 
+#-更新feeds
 ./scripts/feeds update -a
-
+#-安装feeds
 ./scripts/feeds install -a
