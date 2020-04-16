@@ -18,4 +18,5 @@ git clong https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/Leo-Jo-My/luci-theme-argon-light-mod.git package/lean/luci-theme-argon-light-mod
 
 ./scripts/feeds update -a
+
 ./scripts/feeds install -a
