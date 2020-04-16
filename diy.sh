@@ -9,7 +9,7 @@
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 修改默认主题
-sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
+# sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 删除原软件包
 rm -rf package/lean/Luci-theme-argon
@@ -21,6 +21,9 @@ git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/Luci-theme-argon
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
+
+# 取消默认bootstrap主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 #-更新feeds
 ./scripts/feeds update -a
