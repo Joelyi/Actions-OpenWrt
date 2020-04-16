@@ -13,7 +13,7 @@ sed -i 's/bootstrap/argon_light/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 git clong https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
-git clone https://github.com/Leo-Jo-My/luci-theme-argon-light-mod.git package/argon_light
+git clone https://github.com/Leo-Jo-My/luci-theme-argon-light-mod.git package/lean/luci-theme-argon-light-mod
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
