@@ -13,7 +13,10 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 
 # 修改默认主题
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
-# echo '添加主题argon_light'
-# theme_argon_light='https://github.com/Leo-Jo-My/luci-theme-argon-light-mod'  # 主题地址
-# git clone $theme_argon_light package/lean/luci-theme-argon_light
-# echo 'CONFIG_PACKAGE_luci-theme-argon_light=y' >> .config
+
+# 添加软件包
+git clong https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+git clone https://github.com/Leo-Jo-My/luci-theme-argon-light-mod.git package/argon_light
+
+./scripts/feeds update -a
+./scripts/feeds install -a
