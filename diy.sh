@@ -13,7 +13,7 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #ssr-plus
-git clong https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+git clone https://github.com/fw876/helloworld lede/package/lean/luci-app-ssr-plus
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
