@@ -15,9 +15,10 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 rm -r lede/package/lean/Luci-theme-argon
 
 # 添加软件包
+#ssrplus
 git clone https://github.com/fw876/helloworld lede/package/lean/luci-app-ssr-plus
-
-git clone https://github.com/jerrykuku/luci-theme-argon.git  lede/package/lean/Luci-theme-argon
+#theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git lede/package/lean/Luci-theme-argon
 
 ./scripts/feeds update -a
 
