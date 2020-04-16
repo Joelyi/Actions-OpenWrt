@@ -11,9 +11,14 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # 修改默认主题
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
+# 删除原软件包
+rm -r lede/package/lean/Luci-theme-argon
+
 # 添加软件包
-#ssr-plus
 git clone https://github.com/fw876/helloworld lede/package/lean/luci-app-ssr-plus
 
+git clone https://github.com/jerrykuku/luci-theme-argon.git  lede/package/lean/Luci-theme-argon
+
 ./scripts/feeds update -a
+
 ./scripts/feeds install -a
