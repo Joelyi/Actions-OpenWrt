@@ -33,10 +33,10 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 # 修改默认主题
-sed -i "s/bootstrap/argon/g" feeds/luci/modules/luci-base/root/etc/config/luci
+# sed -i "s/bootstrap/argon/g" feeds/luci/modules/luci-base/root/etc/config/luci
 
 # 修改自带默认主题
-# sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 #-更新feeds
 ./scripts/feeds update -a
