@@ -16,7 +16,7 @@ on:
     branches:
       - master
     paths:
-      - 'K1.config'
+      - 'PSG1208/K1.config'
   schedule:
     - cron: 20 5 * * 4
 #  watch:
@@ -25,8 +25,8 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: K1.config
-  DIY_SH: K1.sh
+  CONFIG_FILE: PSG1208/K1.config
+  DIY_SH: PAG/1208/K1.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
