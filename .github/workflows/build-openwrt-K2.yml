@@ -16,7 +16,7 @@ on:
     branches:
       - master
     paths:
-      - 'K2.config'
+      - 'PSG1218/K2.config'
   schedule:
     - cron: 20 5 * * 4
 #  watch:
@@ -25,8 +25,8 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: K2.config
-  DIY_SH: K2.sh
+  CONFIG_FILE: PSG1218/K2.config
+  DIY_SH: PSG1218/K2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
