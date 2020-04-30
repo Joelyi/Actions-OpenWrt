@@ -19,7 +19,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: PSG1208/K1.config
   DIY_SH: PSG1208/K1.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
