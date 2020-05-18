@@ -1,4 +1,4 @@
-name: OpenWrt K2
+name: OpenWrt PSG1218
 
 on:
   repository_dispatch:
@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - 'PSG1218/K2.config'
+      - 'PSG1218/PSG1218.config'
   schedule:
     - cron: 20 5 * * 4
 #  watch:
@@ -17,8 +17,8 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: PSG1218/K2.config
-  DIY_SH: PSG1218/K2.sh
+  CONFIG_FILE: PSG1218/PSG1218.config
+  DIY_SH: PSG1218/PSG1218.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -106,7 +106,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_K2
+        name: OpenWrt_PSG1218
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到奶牛快传
