@@ -22,7 +22,7 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #ssrplus
-git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+# git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #theme-argon
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/Luci-theme-argon
 #passwall
