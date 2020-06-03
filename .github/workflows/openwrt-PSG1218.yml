@@ -9,10 +9,10 @@ on:
       - master
     paths:
       - 'PSG1218/PSG1218.config'
-  schedule:
-    - cron: 20 5 * * 4
-#  watch:
-#    types: started
+#  schedule:
+#    - cron: 20 5 * * 4
+  watch:
+    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
