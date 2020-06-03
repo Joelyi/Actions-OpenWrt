@@ -25,7 +25,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 #ssrplus
 # git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #theme-rosy
-git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
+git clone https://github.com/rosywrt/luci-theme-rosy/tree/openwrt-18.06/luci-theme-rosy.git package/lean/luci-theme-rosy
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
 #luci-app-ssr-pro
