@@ -30,6 +30,8 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
 #luci-app-ssr-pro
 git clone https://github.com/Joelyi/luci-app-ssr-pro.git package/lean/luci-app-ssr-pro
+#解除网易云音乐播放限制 [Mini]
+git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
 # 取消默认bootstrap主题
 sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
