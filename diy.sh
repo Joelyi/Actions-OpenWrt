@@ -28,6 +28,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
+#luci-app-ssr-pro
+git clone https://github.com/Joelyi/luci-app-ssr-pro.git package/lean/luci-app-ssr-pro
 
 # 取消默认bootstrap主题
 sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
