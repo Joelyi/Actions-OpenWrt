@@ -26,11 +26,9 @@ sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #ssrplus
-# git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
-#luci-app-ssr-pro
-git clone https://github.com/Joelyi/luci-app-ssr-pro.git package/lean/luci-app-ssr-pro
 #解除网易云音乐播放限制 [Mini]
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
