@@ -40,12 +40,6 @@ git clone https://github.com/Joelyi/luci-app-unblockneteasemusic-Golang.git pack
 #解除网易云音乐播放限制 [Mini]
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
-# 取消默认bootstrap主题
-# sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
-# sed -i '/\+luci-theme-bootstrap/d' package/feeds/luci/luci/Makefile
-# sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
-# sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-
 #-更新feeds
 ./scripts/feeds update -a
 #-安装feeds
