@@ -15,14 +15,16 @@ sed -i "s/OpenWrt/PSG1208/g" package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 删除原软件包
-# rm -rf package/lean/luci-theme-argon  
+rm -rf package/lean/luci-app-unblockmusic
+rm -rf package/lean/UnblockNeteaseMusic
+rm -rf package/lean/UnblockNeteaseMusicGo
 
 # 添加主题
 #theme-rosy
-git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
+git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly.git package/lean/luci-theme-Butterfly
 
 # 修改默认主题
-sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/Butterfly/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #openwet常用软件包
@@ -33,6 +35,8 @@ sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
 git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
+#解除网易云音乐播放限制 [Golang]
+git clone https://github.com/Joelyi/luci-app-unblockneteasemusic-Golang.git package/lean/luci-app-unblockneteasemusic-Go
 #解除网易云音乐播放限制 [Mini]
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
