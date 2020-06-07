@@ -35,8 +35,6 @@ sed -i 's/bootstrap/Butterfly/g' feeds/luci/collections/luci/Makefile
 git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
-#解除网易云音乐播放限制 [Golang]
-git clone https://github.com/Joelyi/luci-app-unblockneteasemusic-Golang.git package/lean/luci-app-unblockneteasemusic-Go
 #解除网易云音乐播放限制 [Mini]
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
