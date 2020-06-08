@@ -1,3 +1,11 @@
+#=================================================
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
+
 name: OpenWrt PSG1208
 
 on:
@@ -10,20 +18,21 @@ on:
     paths:
       - 'PSG1208.config'
 #  schedule:
-#    - cron: 20 5 * * 4
-  watch:
-    types: started
+#    - cron: 0 8 * * 5
+#  watch:
+#    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: PSG1208.config
   DIY_SH: PSG1208.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: true
+  UPLOAD_WETRANSFER: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -67,7 +76,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_SH
         cd openwrt
-        ../$DIY_SH
+        $GITHUB_WORKSPACE/$DIY_SH
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
