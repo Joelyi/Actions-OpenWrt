@@ -16,9 +16,10 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  CONFIG_FILE: PSG1208/PSG1208.config
-  DIY_SH: PSG1208/PSG1208.sh
+  BASE_PATH: master
+  PUBLIC_PATH: PSG1208
+  CONFIG_FILE: PSG1208.config
+  DIY_SH: PSG1208.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
