@@ -28,11 +28,11 @@ sed -i 's/bootstrap/Butterfly/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #openwet常用软件包
-git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
+# git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
 #passwall依赖
-git clone https://github.com/kenzok8/small.git package/lean/small
+# git clone https://github.com/kenzok8/small.git package/lean/small
 #ssrplus
-# git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 #passwall
 # git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
 #解除网易云音乐播放限制 [Mini]
