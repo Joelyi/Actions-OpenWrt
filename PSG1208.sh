@@ -33,10 +33,6 @@ sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
 # git clone https://github.com/kenzok8/small.git package/lean/small
 #ssrplus
 git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
-#passwall
-# git clone https://github.com/Lienol/openwrt-package.git package/lean/lienol
-#解除网易云音乐播放限制 [Mini]
-git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/lean/luci-app-unblockneteasemusic-mini
 
 #-更新feeds
 ./scripts/feeds update -a
