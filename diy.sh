@@ -13,10 +13,10 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 
 # 添加主题
 #theme-rosy
-git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
+# git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
 
 # 修改默认主题
-sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 添加软件包
 #openwet常用软件包
