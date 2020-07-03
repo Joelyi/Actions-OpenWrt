@@ -23,8 +23,6 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 # git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
 #passwall依赖
 # git clone https://github.com/kenzok8/small.git package/lean/small
-#ssrplus
-git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 
 #-更新feeds
 ./scripts/feeds update -a
