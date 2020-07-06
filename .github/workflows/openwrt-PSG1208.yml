@@ -27,7 +27,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: PSG1208.config
-  DIY_SH: DIY.sh
+  DIY_SH: diy.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
