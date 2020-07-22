@@ -19,6 +19,6 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 # git clone https://github.com/Joelyi/helloworld.git package/lean/luci-app-ssr-plus
 
 #-更新feeds
-./scripts/feeds update -a
+# ./scripts/feeds update -a
 #-安装feeds
-./scripts/feeds install -a
+# ./scripts/feeds install -a
