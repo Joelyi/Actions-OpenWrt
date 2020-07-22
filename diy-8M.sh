@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 # 回退源码
-git reset --hard commit_acf267bf08cda359b80069a79a790a1d57399e49
+git reset --hard commit_acf267b
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
