@@ -26,7 +26,7 @@ on:
     types: started
 
 env:
-  REPO_URL: https://github.com/Joelyi/openwrt
+  REPO_URL: https://github.com/coolsnowwolf/openwrt
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: PSG1208.config
