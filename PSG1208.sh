@@ -43,7 +43,8 @@ sed -i 's/bootstrap/$default_theme/g' feeds/luci/collections/luci/Makefile
 
 # 增加ssr
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-git clone https://github.com/Joelyi/helloworld.git package/openwrt-packages/luci-app-ssr-plus
+git clone https://github.com/Joelyi/helloworld.git package/lean/luci-app-ssr-plus
 
 # 更新安装
-./scripts/feeds update -a && ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
