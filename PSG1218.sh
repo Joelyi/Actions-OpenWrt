@@ -1,8 +1,8 @@
 #!/bin/bash
 #============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
+# File name: diy-.sh
+# Description: OpenWrt DIY script  (After Update feeds)
 # Lisence: MIT
 # Author: P3TERX
 # Blog: https://p3terx.com
@@ -43,7 +43,8 @@ sed -i 's/bootstrap/$default_theme/g' feeds/luci/collections/luci/Makefile
 
 # 增加ssr
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-# git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
+git clone https://github.com/Joelyi/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 
+# 更新安装
 ./scripts/feeds update -a
 ./scripts/feeds install -a
