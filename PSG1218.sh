@@ -1,7 +1,7 @@
 #!/bin/bash
 #============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-.sh
+# File name: diy.sh
 # Description: OpenWrt DIY script  (After Update feeds)
 # Lisence: MIT
 # Author: P3TERX
