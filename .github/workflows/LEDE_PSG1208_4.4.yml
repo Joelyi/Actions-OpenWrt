@@ -3,10 +3,11 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
+# 5.4内核固件生成
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt PSG1208_4.4
+name: LEDE_PSG1208_4.4
 
 on:
   repository_dispatch:
@@ -27,7 +28,8 @@ env:
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: PSG1208.config
-  DIY_SH: PSG1208.sh
+  DIY_P1_SH: PSG1208-part1.sh
+  DIY_P2_SH: PSG1208-part2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -57,29 +59,39 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-    - name: 克隆源代码
+    - name: Clone source code
       working-directory: /workdir
       run: |
         df -hT $PWD
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: 更新安装提要
-      run: cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
+    - name: Load custom feeds
+      run: |
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+        chmod +x $DIY_P1_SH
+        cd openwrt
+        $GITHUB_WORKSPACE/$DIY_P1_SH
 
-    - name: 加载自定义配置
+    - name: Update feeds
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
+
+    - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_SH
+        chmod +x $DIY_P2_SH
         cd openwrt
-        ../$DIY_SH
+        $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
-    - name: 下载dl文件包
+    - name: Download package
       id: package
       run: |
         cd openwrt
