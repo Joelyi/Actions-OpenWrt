@@ -12,6 +12,13 @@ name: OpenWrt_SSH
 
 on:
   repository_dispatch:
+  release:
+    types: published
+  push:
+    branches:
+      - master
+    paths:
+      - 'SSH.config'
   workflow_dispatch:
     inputs:
       ssh:
