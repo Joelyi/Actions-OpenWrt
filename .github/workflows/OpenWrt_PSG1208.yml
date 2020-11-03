@@ -7,7 +7,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: LEDE_PSG1208_4.4
+name: OpenWrt_PSG1208
 
 on:
   repository_dispatch:
