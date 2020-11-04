@@ -7,12 +7,17 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=============================================================
-
 # Uncomment a feed source
 # sed -i 's/^#\(.*Joelyi\)/\1/' feeds.conf.default
+
+# 删除原软件包
+# rm -rf package/lean/luci-app-unblockmusic
 
 # 添加软件包
 #openwet常用软件包
 git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
 #passwall依赖
 git clone https://github.com/kenzok8/small.git package/lean/small
+#ssrplus
+# git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+# git clone https://github.com/Joelyi/helloworld.git package/lean/luci-app-ssr-plus
