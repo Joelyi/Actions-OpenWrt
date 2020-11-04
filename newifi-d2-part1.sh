@@ -27,7 +27,7 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 #openwet常用软件包
 git clone https://github.com/kenzok8/openwrt-packages.git package/lean/openwrt-packages
 #passwall依赖
-# git clone https://github.com/kenzok8/small.git package/lean/passwall-small
+git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
 #OpenClash
 # git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
 #京东签到插件
