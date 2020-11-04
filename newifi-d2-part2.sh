@@ -33,7 +33,7 @@ sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.
 # git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
 
 # 修改默认主题
-sed -i 's/bootstrap/$default_theme/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # 去除默认主题
 #sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
