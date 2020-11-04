@@ -21,7 +21,7 @@ on:
       - 'SSH.config'
   workflow_dispatch:
     inputs:
-      ssh: 'true'
+      ssh:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
@@ -34,6 +34,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: SSH.config
   DIY_SH: diy.sh
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -85,7 +86,7 @@ jobs:
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
