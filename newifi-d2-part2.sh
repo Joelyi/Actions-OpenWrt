@@ -9,6 +9,7 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+
 device_name='Newifi3-D2'
 wifi_name='Newifi3'
 lan_ip='192.168.2.1'        # Lan Ip地址
