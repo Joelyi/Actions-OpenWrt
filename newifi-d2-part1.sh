@@ -21,9 +21,12 @@
 
 # 添加软件包
 #openwet常用软件包
-git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
+# git clone https://github.com/kenzok8/openwrt-packages.git package/lean/diy
 #passwall依赖
-git clone https://github.com/kenzok8/small.git package/lean/small
-#ssrplus
-# git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
-# git clone https://github.com/Joelyi/helloworld.git package/lean/luci-app-ssr-plus
+# git clone https://github.com/kenzok8/small.git package/lean/small
+#OpenClash
+git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
+#京东签到插件
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
+#smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
