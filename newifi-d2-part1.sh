@@ -25,12 +25,10 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 
 # 添加软件包
 #openwet常用软件包
-git clone https://github.com/kenzok8/openwrt-packages.git package/lean/openwrt-packages
+#git clone https://github.com/kenzok8/openwrt-packages.git package/lean/openwrt-packages
 #passwall依赖
-git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
+#git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
 #OpenClash
-# git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
+git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
 #京东签到插件
-# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
-#smartdns
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
