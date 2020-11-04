@@ -9,7 +9,7 @@
 #=============================================================
 
 # Uncomment a feed source
-sed -i 's/^#\(.*Joelyi\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*Joelyi\)/\1/' feeds.conf.default
 
 # 添加clash支持
 # git clone https://github.com/frainzy1477/luci-app-clash.git package/lean/luci-app-clash
