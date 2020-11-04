@@ -34,5 +34,3 @@ git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/sma
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
 #smartdns
 # git clone https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
-
-./scripts/feeds clean
