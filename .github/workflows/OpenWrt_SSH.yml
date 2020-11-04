@@ -21,10 +21,10 @@ on:
       - 'SSH.config'
   workflow_dispatch:
     inputs:
-      ssh:
+      ssh: ture
         description: 'SSH connection to Actions'
-        required: true
-        default: 'ture'
+        required: false
+        default: 'false'
 #  schedule:
 #    - cron: 0 8 * * 5
 
