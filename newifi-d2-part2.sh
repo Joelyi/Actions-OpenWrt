@@ -28,10 +28,6 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" packa
 # 修改wifi名称
 sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-# 添加主题
-#theme-rosy
-# git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
-
 # 修改默认主题
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
