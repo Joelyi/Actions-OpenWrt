@@ -21,7 +21,7 @@ on:
       - 'SSH.config'
   workflow_dispatch:
     inputs:
-      ssh: ture
+      ssh: 'true'
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
