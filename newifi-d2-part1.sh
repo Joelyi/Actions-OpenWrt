@@ -16,6 +16,10 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
+# 添加主题
+#theme-rosy
+git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
+
 # 删除原软件包
 # rm -rf package/lean/luci-app-unblockmusic
 
