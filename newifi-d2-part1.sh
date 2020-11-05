@@ -29,17 +29,3 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 #git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
 #京东签到插件
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
-
-# 删除原软件包
-rm -rf feeds/lienol/lienol/ipt2socks
-rm -rf feeds/lienol/lienol/shadowsocksr-libev
-rm -rf feeds/lienol/lienol/pdnsd-alt
-rm -rf feeds/lienol/package/verysync
-rm -rf feeds/lienol/lienol/luci-app-verysync
-rm -rf package/lean/kcptun
-rm -rf package/lean/trojan
-rm -rf package/lean/v2ray
-rm -rf package/lean/luci-app-kodexplorer
-rm -rf package/lean/luci-app-pppoe-relay
-rm -rf package/lean/luci-app-pptp-server
-rm -rf package/lean/luci-app-v2ray-server
