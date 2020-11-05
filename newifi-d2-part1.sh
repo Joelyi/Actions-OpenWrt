@@ -14,14 +14,11 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # 添加主题
 #theme-rosy
 git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
-
-# 删除原软件包
-# rm -rf package/lean/luci-app-unblockmusic
 
 # 添加软件包
 #openwet常用软件包
@@ -29,6 +26,21 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 #passwall依赖
 #git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
 #OpenClash
-git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
+#git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
 #京东签到插件
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
+
+# 删除原软件包
+rm -rf feeds/lienol/lienol/ipt2socks
+rm -rf feeds/lienol/lienol/shadowsocksr-libev
+rm -rf feeds/lienol/lienol/pdnsd-alt
+rm -rf feeds/lienol/package/verysync
+rm -rf feeds/lienol/lienol/luci-app-verysync
+rm -rf package/lean/kcptun
+rm -rf package/lean/trojan
+rm -rf package/lean/v2ray
+rm -rf package/lean/luci-app-kodexplorer
+rm -rf package/lean/luci-app-pppoe-relay
+rm -rf package/lean/luci-app-pptp-server
+rm -rf package/lean/luci-app-v2ray-server
+#rm -rf package/lean/openwrt-packages/small/luci-app-verysync
