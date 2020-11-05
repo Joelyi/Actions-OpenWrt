@@ -14,7 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # 添加主题
 #theme-rosy
@@ -22,9 +22,9 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme
 
 # 添加软件包
 #openwet常用软件包
-#git clone https://github.com/kenzok8/openwrt-packages.git package/lean/openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages.git package/lean/openwrt-packages
 #passwall依赖
-#git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
+git clone https://github.com/kenzok8/small.git package/lean/openwrt-packages/small
 #OpenClash
 #git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-OpenClash
 #京东签到插件
