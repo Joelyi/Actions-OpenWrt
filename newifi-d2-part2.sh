@@ -36,3 +36,20 @@ sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
 # 修改内核
 # sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=4.19/g' ./target/linux/x86/Makefile
 # sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=4.19/g' ./target/linux/x86/Makefile
+
+# 更改软件包
+./scripts/feeds clean
+./scripts/feeds update -a
+rm -rf package/lean/openwrt-packages/small/ipt2socks
+rm -rf package/lean/openwrt-packages/small/shadowsocksr-libev
+rm -rf package/lean/openwrt-packages/small/pdnsd-alt
+rm -rf package/lean/openwrt-packages/small/verysync
+rm -rf package/lean/openwrt-packages/small/luci-app-verysync
+rm -rf package/lean/kcptun
+rm -rf package/lean/trojan
+rm -rf package/lean/v2ray
+rm -rf package/lean/luci-app-kodexplorer
+rm -rf package/lean/luci-app-pppoe-relay
+rm -rf package/lean/luci-app-pptp-server
+rm -rf package/lean/luci-app-v2ray-server
+./scripts/feeds install -a
