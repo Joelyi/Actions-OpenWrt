@@ -9,23 +9,22 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-
-device_name='Newifi3-D2'
-wifi_name='Newifi3'
-lan_ip='192.168.2.1'        # Lan Ip地址
-utc_name='Asia\/Shanghai'   # 时区
+#device_name='Newifi3-D2'
+#wifi_name='Newifi3'
+#lan_ip='192.168.2.1'        # Lan Ip地址
+#utc_name='Asia\/Shanghai'   # 时区
 
 # 修改机器名称
-sed -i "s/OpenWrt/$device_name/g" package/base-files/files/bin/config_generate
+sed -i "s/OpenWrt/Newifi3-D2/g" package/base-files/files/bin/config_generate
 
 # 设置lan ip
-sed -i "s/192.168.1.1/$lan_ip/g" package/base-files/files/bin/config_generate
+sed -i "s/192.168.1.1/192.168.2.1/g" package/base-files/files/bin/config_generate
 
 # 修改默认时区
-sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" package/base-files/files/bin/config_generate
+sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 # 修改wifi名称
-sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i "s/OpenWrt/Newifi3/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改默认主题
 sed -i 's/bootstrap/rosy/g' feeds/luci/collections/luci/Makefile
