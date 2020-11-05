@@ -43,4 +43,3 @@ rm -rf package/lean/luci-app-kodexplorer
 rm -rf package/lean/luci-app-pppoe-relay
 rm -rf package/lean/luci-app-pptp-server
 rm -rf package/lean/luci-app-v2ray-server
-#rm -rf package/lean/openwrt-packages/small/luci-app-verysync
