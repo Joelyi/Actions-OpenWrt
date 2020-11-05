@@ -72,22 +72,6 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Delete conflict feeds
-      run: |
-        cd openwrt
-        rm -rf package/lean/openwrt-packages/small/ipt2socks
-        rm -rf package/lean/openwrt-packages/small/shadowsocksr-libev
-        rm -rf package/lean/openwrt-packages/small/pdnsd-alt
-        rm -rf package/lean/openwrt-packages/small/verysync
-        rm -rf package/lean/openwrt-packages/small/luci-app-verysync
-        rm -rf package/lean/kcptun
-        rm -rf package/lean/trojan
-        rm -rf package/lean/v2ray
-        rm -rf package/lean/luci-app-kodexplorer
-        rm -rf package/lean/luci-app-pppoe-relay
-        rm -rf package/lean/luci-app-pptp-server
-        rm -rf package/lean/luci-app-v2ray-server
-
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
